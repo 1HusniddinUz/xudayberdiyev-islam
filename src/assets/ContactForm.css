@@ -1,0 +1,243 @@
+/* === ContactForm umumiy === */
+#ContactForm {
+    width: 100%;
+    position: relative;
+    padding: 40px 20px;
+    background: #f8f9fa;
+    align-content: center;
+}
+
+#ContactForm .container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* === Chap taraf (matn + ijtimoiy tarmoqlar) === */
+.container .contactText {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.contactText .contactInfo h3 {
+    font-size: 1.5rem;
+    color: black;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.contactText .contactInfo p {
+    color: #333;
+    margin: 5px 0;
+    font-size: 0.95rem;
+}
+
+.contactText .contactInfo p span {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #3c2769;
+}
+
+/* === Social link boxlar === */
+.contactText .contactSocialLink {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.link_box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 12px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    width: 60%;
+}
+
+.link_box:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    border-color: #3c2769;
+}
+
+/* Icon */
+.link_box i {
+    font-size: 1.6rem;
+    color: #3c2769;
+    transition: color 0.3s ease;
+}
+
+.link_box:hover i {
+    color: #ad851e;
+}
+
+/* Button */
+.link_box button {
+    background: #3c2769;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 8px 18px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.link_box button:hover {
+    background: #ad851e;
+    transform: scale(1.05);
+}
+
+/* === Logo markazda === */
+.container .contactLogo {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .contactLogo img {
+    width: 100%;
+}
+
+/* === Location o‘ng taraf === */
+.container .contactLocation {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .contactLocation h3 {
+    font-size: 1.5rem;
+    color: black;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* === Yuqoriga qaytish tugmasi === */
+#ContactForm .footerToTop {
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 2rem;
+    color: #3c2769;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #3c2769;
+    bottom: 20px;
+    right: 20px;
+    position: absolute;
+    background: #fff;
+    transition: 0.3s;
+}
+
+#ContactForm .footerToTop:hover {
+    background: #3c2769;
+    color: #fff;
+}
+
+/* === RESPONSIVE === */
+
+/* 📱 Mobile (max 576px) */
+@media (max-width: 576px) {
+    #ContactForm {
+        padding: 30px 15px;
+    }
+
+    #ContactForm .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .container .contactText,
+    .container .contactLogo,
+    .container .contactLocation {
+        width: 100%;
+    }
+
+    .contactText .contactSocialLink {
+        width: 100%;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .link_box {
+        width: 90%;
+        justify-content: center;
+    }
+
+    .container .contactLogo img {
+        max-width: 120px;
+        margin: 20px 0;
+    }
+
+    .container .contactLocation iframe {
+        height: 300px;
+    }
+}
+
+/* 📲 Tablet (577px - 991px) */
+@media (min-width: 577px) and (max-width: 991px) {
+    #ContactForm .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .container .contactText,
+    .container .contactLogo,
+    .container .contactLocation {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .contactText .contactSocialLink {
+        justify-content: center;
+        gap: 25px;
+    }
+
+    .link_box {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .container .contactLogo img {
+        max-width: 150px;
+    }
+}
+
+/* 💻 Desktop (992px +) */
+@media (min-width: 992px) {
+    #ContactForm .container {
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .container .contactText {
+        width: 30%;
+    }
+
+    .container .contactLogo {
+        width: 20%;
+    }
+
+    .container .contactLocation {
+        width: 40%;
+    }
+}

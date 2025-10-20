@@ -1,0 +1,162 @@
+/* Umumiy */
+#Navbar {
+    background-color: #332918;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 1000;
+    width: 100%;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+#Navbar .container {
+    height: 8vh;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Burger tugma */
+.burger_menu {
+    display: none; /* desktopda yashirin */
+}
+.burger {
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+/* Logo */
+.logo_box {
+    text-align: center;
+}
+.logo_box {
+    color: white;
+}
+.logo_box img {
+    height: 65px;
+    object-fit: contain;
+}
+
+/* Desktop navigation */
+.desktop_nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav_links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+.nav_links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+.nav_links a:hover {
+    color: #facc15;
+}
+
+/* Language provider (desktop) */
+.lang_provider select {
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 15px;
+    padding: 4px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.lang_provider option {
+    color: #000;
+}
+
+/* Slide menyu */
+.navigation_menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 70%;
+    max-width: 300px;
+    height: 100vh;
+    background: #fff;
+    padding: 60px 20px;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+    z-index: 2000;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: left 0.4s ease-in-out;
+}
+.navigation_menu.open {
+    left: 0;
+}
+.navigation_menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 18px;
+}
+.navigation_menu a {
+    text-decoration: none;
+    color: #332918;
+    transition: color 0.3s ease;
+}
+.navigation_menu a:hover {
+    color: #0073e6;
+}
+.close_btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Language provider (mobile menu ichida) */
+.lang_provider_mobile {
+    margin-top: 40px;
+}
+.lang_provider_mobile select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    /* Tablet & Mobile */
+    .burger_menu {
+        display: flex;
+        justify-content: flex-start;
+    }
+    .desktop_nav {
+        display: none; /* tashqaridagi menyu va lang yo‘q */
+    }
+}
+
+@media (min-width: 1025px) {
+    /* Desktop */
+    .burger_menu {
+        display: none;
+    }
+    .navigation_menu {
+        display: none;
+    }
+}

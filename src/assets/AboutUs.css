@@ -1,0 +1,167 @@
+/* Section container */
+#AboutUs {
+    width: 100%;
+    padding: 80px 20px;
+    background: linear-gradient(to bottom, #ffffff, #f9f9f9);
+}
+
+#AboutUs .container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Background watermark text */
+.about_bg {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.about_bg p {
+    font-size: 80px;
+    font-weight: 800;
+    color: rgba(0, 0, 0, 0.05);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin: 0;
+    user-select: none;
+}
+
+/* Heading */
+#AboutUs h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+/* Paragraph */
+#AboutUs p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+    max-width: 650px;
+    margin: 0 auto 40px;
+}
+
+/* Buttons container */
+.about_link {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* moslashuv uchun */
+}
+
+/* Common button styles */
+.about_link button {
+    padding: 12px 30px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 25px;
+    border: 2px solid #ad851e;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Primary button */
+.about_link button:first-child {
+    background: #ad851e;
+    color: #fff;
+}
+
+.about_link button:first-child:hover {
+    background: #816007;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgb(175, 131, 61);
+}
+
+/* Outline button */
+.about_link button:last-child {
+    background: #fff;
+    color: #ad851e;
+}
+
+.about_link button:last-child:hover {
+    background: #f4fdf7;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(199, 157, 94, 0.6);
+}
+
+/* ========================= */
+/* RESPONSIVE DESIGN START   */
+/* ========================= */
+
+/* Mobile (max 600px) */
+@media (max-width: 600px) {
+    #AboutUs {
+        padding: 50px 15px;
+    }
+
+    .about_bg p {
+        font-size: 40px; /* watermark kichikroq */
+        letter-spacing: 2px;
+    }
+
+    #AboutUs h3 {
+        font-size: 22px;
+    }
+
+    #AboutUs p {
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 30px;
+    }
+
+    .about_link {
+        flex-direction: column; /* tugmalar ustma-ust */
+        gap: 12px;
+    }
+
+    .about_link button {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}
+
+/* Tablet (601px – 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+    .about_bg p {
+        font-size: 60px;
+        letter-spacing: 3px;
+    }
+
+    #AboutUs h3 {
+        font-size: 26px;
+    }
+
+    #AboutUs p {
+        font-size: 15px;
+        max-width: 550px;
+    }
+
+    .about_link button {
+        font-size: 14px;
+        padding: 11px 25px;
+    }
+}
+
+/* Desktop (900px dan katta) */
+@media (min-width: 901px) {
+    .about_bg p {
+        font-size: 90px;
+    }
+
+    #AboutUs h3 {
+        font-size: 34px;
+    }
+
+    #AboutUs p {
+        font-size: 16px;
+    }
+
+    .about_link button {
+        font-size: 15px;
+    }
+}
