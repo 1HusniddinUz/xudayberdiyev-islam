@@ -117,6 +117,80 @@
 .navigation_menu a:hover {
     color: #0073e6;
 }
+/* Dropdown styles */
+.dropdown {
+    position: relative;
+    cursor: pointer;
+}
+
+.dropdown_title {
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.dropdown_title:hover {
+    color: #facc15;
+}
+
+.dropdown_menu {
+    position: absolute;
+    top: 35px;
+    left: 0;
+    background-color: #44371f;
+    list-style: none;
+    padding: 8px 0;
+    margin: 0;
+    border-radius: 6px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 100;
+    min-width: 160px;
+}
+
+.dropdown_menu.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown_menu li {
+    padding: 8px 15px;
+}
+
+.dropdown_menu li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    transition: background 0.3s ease;
+}
+
+.dropdown_menu li a:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Mobile dropdown */
+.mobile_dropdown {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.mobile_dropdown ul {
+    margin-top: 5px;
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.mobile_dropdown a {
+    color: #332918;
+}
+
 .close_btn {
     position: absolute;
     top: 15px;

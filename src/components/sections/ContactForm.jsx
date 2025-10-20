@@ -58,13 +58,7 @@ const ContactForm = () => {
                                 <button>INSTAGRAM</button>
                             </a>
                         </div>
-                        <div className="link_box">
-                            <a href="https://market.yandex.uz/card/sato--eto-starinnyy-strunno-smychkovyy-instrument-odin-iz-samykh-izyskannykh-i-redkikh-v-uzbekskoy-muzykalnoy-traditsii/4705609272?businessId=216456918&showOriginalKmEmptyOffer=1&ogV=-6" target="_blank"
-                               rel="noopener noreferrer">
-                                <i className="fa-brands fa-yandex"></i>
-                                <button>YANDEX MARKET</button>
-                            </a>
-                        </div>
+
 
 
                     </div>
