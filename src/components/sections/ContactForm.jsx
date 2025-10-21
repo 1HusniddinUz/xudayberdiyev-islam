@@ -16,18 +16,6 @@ const ContactForm = () => {
                         <p>
                             {t(`phone`)} <a href="tel:+998913118177" rel="noopener noreferrer"><span>{`+998 (91) 311-81-77`}</span></a>
                         </p>
-                        <p>
-                            {t(`email`)}
-                            <span>
-                <a
-                    href="https://"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                 EXAMPLE@gmail.com
-                </a>
-              </span>
-                        </p>
                     </div>
                     <div className="contactSocialLink">
                         <div className="link_box">
