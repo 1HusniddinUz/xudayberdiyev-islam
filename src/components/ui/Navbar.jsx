@@ -38,7 +38,8 @@ const Navbar = () => {
                                 Marketplace ▾
                             </span>
                             <ul className={`dropdown_menu ${dropdownOpen ? "show" : ""}`}>
-                                <a href="#ozon"> <li>Ozon</li></a>
+                                <li><a href="https://uz.ozon.com/product/rubab-natsionalnyy-uzbekskiy-instrument-eto-strunnyy-shchipkovyy-instrument-2979862703/?oos_search=false" target="_blank" rel="noopener noreferrer">Ozon</a></li>
+                                <li><a href="https://uzum.uz/uz/product/tar-ozarbayjon-musiqa-asbobi-sargish---11-2038661?skuId=7247483" target="_blank" rel="noopener noreferrer">Uzum Market</a></li>
                                 <a href="https://market.yandex.uz/card/sato--eto-starinnyy-strunno-smychkovyy-instrument-odin-iz-samykh-izyskannykh-i-redkikh-v-uzbekskoy-muzykalnoy-traditsii/4705609272?businessId=216456918&showOriginalKmEmptyOffer=1&ogV=-6" target="_blank" rel="noopener noreferrer"><li>Yandex Market</li></a>
                             </ul>
                         </li>
@@ -75,7 +76,8 @@ const Navbar = () => {
                     <li className="mobile_dropdown">
                         <span>Marketplace</span>
                         <ul>
-                            <li><a href="#ozon" target="_blank" rel="noopener noreferrer">Ozon</a></li>
+                            <li><a href="https://uz.ozon.com/product/rubab-natsionalnyy-uzbekskiy-instrument-eto-strunnyy-shchipkovyy-instrument-2979862703/?oos_search=false" target="_blank" rel="noopener noreferrer">Ozon</a></li>
+                            <li><a href="https://uzum.uz/uz/product/tar-ozarbayjon-musiqa-asbobi-sargish---11-2038661?skuId=7247483" target="_blank" rel="noopener noreferrer">Uzum Market</a></li>
                             <a href="https://market.yandex.uz/card/sato--eto-starinnyy-strunno-smychkovyy-instrument-odin-iz-samykh-izyskannykh-i-redkikh-v-uzbekskoy-muzykalnoy-traditsii/4705609272?businessId=216456918&showOriginalKmEmptyOffer=1&ogV=-6" target="_blank" rel="noopener noreferrer"><li>Yandex Market</li></a>
                         </ul>
                     </li>
