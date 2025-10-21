@@ -1,47 +1,66 @@
 /* Section container */
 #AboutUs {
+    position: relative;
+    isolation: isolate;              /* stacking context */
     width: 100%;
     padding: 80px 20px;
-    background: linear-gradient(to bottom, #ffffff, #f9f9f9);
+    min-height: 100dvh;              /* mobile-safe viewport */
+    background-image: url("./media/bg-image.png");
+    background-size: cover;
+    background-position: center;
+    background-color: #0f172a;       /* fallback */
+    display: flex;
+    align-items: end;
 }
 
+/* Dark overlay under content */
+#AboutUs .about_overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 0;                      /* pastga tushirildi */
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+}
+
+/* Content wrapper */
 #AboutUs .container {
-    max-width: 900px;
+    position: relative;
+    z-index: 1;                      /* overlay ustida */
+    max-width: 1440px;
     margin: 0 auto;
     text-align: center;
+    width: 100%;
+    justify-content: end;
+    align-content: end;
 }
 
-/* Background watermark text */
-.about_bg {
-    position: relative;
-    margin-bottom: 40px;
-}
+/* Watermark — alohida qatlam */
+.about_watermark {
 
-.about_bg p {
-    font-size: 80px;
+    z-index: 2;                      /* contentdan pastda */
+    pointer-events: none;
+    user-select: none;
+}
+.about_watermark p {
     font-weight: 800;
-    color: rgba(0, 0, 0, 0.05);
+    color: rgb(255, 255, 255);
     text-transform: uppercase;
     letter-spacing: 5px;
     margin: 0;
-    user-select: none;
 }
 
-/* Heading */
-#AboutUs h3 {
+/* Real content */
+.about_content h3 {
     font-size: 32px;
     font-weight: 700;
-    color: #2c3e50;
+    color: #ffffff;                  /* qorong‘i fon uchun */
     margin-bottom: 20px;
-    position: relative;
 }
-
-/* Paragraph */
-#AboutUs p {
+.about_content p {
     font-size: 16px;
     line-height: 1.8;
-    color: #555;
-    max-width: 650px;
+    color: #e5e7eb;
+    max-width: 1080px;
     margin: 0 auto 40px;
 }
 
@@ -50,10 +69,12 @@
     display: flex;
     justify-content: center;
     gap: 20px;
-    flex-wrap: wrap; /* moslashuv uchun */
+    flex-wrap: wrap;
+    margin-top: 10px;
 }
+.about_link a { text-decoration: none; }
 
-/* Common button styles */
+/* Common button styles  */
 .about_link button {
     padding: 12px 30px;
     font-size: 15px;
@@ -69,7 +90,6 @@
     background: #ad851e;
     color: #fff;
 }
-
 .about_link button:first-child:hover {
     background: #816007;
     transform: translateY(-2px);
@@ -78,12 +98,11 @@
 
 /* Outline button */
 .about_link button:last-child {
-    background: #fff;
+    background: transparent;
     color: #ad851e;
 }
-
 .about_link button:last-child:hover {
-    background: #f4fdf7;
+    background: rgba(173, 133, 30, 0.08);
     transform: translateY(-2px);
     box-shadow: 0 6px 12px rgba(199, 157, 94, 0.6);
 }
@@ -94,27 +113,22 @@
 
 /* Mobile (max 600px) */
 @media (max-width: 600px) {
-    #AboutUs {
-        padding: 50px 15px;
-    }
+    #AboutUs { padding: 56px 16px; }
 
-    .about_bg p {
-        font-size: 40px; /* watermark kichikroq */
+    .about_watermark p {
+        font-size: 40px;
         letter-spacing: 2px;
     }
 
-    #AboutUs h3 {
-        font-size: 22px;
-    }
-
-    #AboutUs p {
+    .about_content h3 { font-size: 22px; }
+    .about_content p  {
         font-size: 14px;
         line-height: 1.6;
         margin-bottom: 30px;
     }
 
     .about_link {
-        flex-direction: column; /* tugmalar ustma-ust */
+        flex-direction: column;
         gap: 12px;
     }
 
@@ -127,18 +141,15 @@
 
 /* Tablet (601px – 900px) */
 @media (min-width: 601px) and (max-width: 900px) {
-    .about_bg p {
+    .about_watermark p {
         font-size: 60px;
         letter-spacing: 3px;
     }
 
-    #AboutUs h3 {
-        font-size: 26px;
-    }
-
-    #AboutUs p {
+    .about_content h3 { font-size: 26px; }
+    .about_content p  {
         font-size: 15px;
-        max-width: 550px;
+        max-width: 640px;
     }
 
     .about_link button {
@@ -147,21 +158,10 @@
     }
 }
 
-/* Desktop (900px dan katta) */
+/* Desktop (>=901px) */
 @media (min-width: 901px) {
-    .about_bg p {
-        font-size: 90px;
-    }
-
-    #AboutUs h3 {
-        font-size: 34px;
-    }
-
-    #AboutUs p {
-        font-size: 16px;
-    }
-
-    .about_link button {
-        font-size: 15px;
-    }
+    .about_watermark p { font-size: 3rem; }
+    .about_content h3 { font-size: 34px; }
+    .about_content p  { font-size: 16px; }
+    .about_link button { font-size: 15px; }
 }

@@ -1,16 +1,71 @@
-#HeroSection
-{
+/* Container */
+#HeroSection {
+    position: relative;
+    isolation: isolate;        /* z-index baland-pastini ajratadi */
     width: 100%;
-    height: 90vh;
-    align-content: center;
+    min-height: 90dvh;         /* mobile-safe viewport */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    overflow: hidden;
+    background: #0b1020;       /* video yuklanmasa fallback rang */
 }
-#HeroSection img
-{
+
+/* Video qatlam */
+#HeroSection .hero_video {
+    position: absolute;
+    inset: 0;                  /* top/right/bottom/left: 0 */
     width: 100%;
     height: 100%;
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
     object-fit: cover;
+    z-index: 0;
+}
+
+/* Overlay qatlam */
+#HeroSection .overlay {
+    position: absolute;
+    inset: 0;                  /* avval faqat top bor edi */
+    background-color: rgba(0, 0, 0, 0.48);
+    z-index: 1;
+    pointer-events: none;      /* kliklarni to‘smasin */
+}
+
+/* Kontent qatlam */
+#HeroSection .hero_content {
+    position: relative;
+    z-index: 2;        /* overlaydan yuqori */
+    color: #fff;
+    padding: 0 20px;
+    display: grid;
+    place-items: center;  /* logoni markazga */
+    gap: 16px;
+}
+
+/* Logo konteyneri */
+#HeroSection .hero_logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 14px;
+    border-radius: 16px;
+    backdrop-filter: blur(2px);
+    text-decoration: none;
+}
+
+/* Logoning o‘zi */
+#HeroSection .hero_logo img {
+    height: 500px;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 24px rgba(0,0,0,0.45));
+}
+
+/* Agar logoni chap-pastga joylashtirmoqchi bo‘lsangiz:
+#HeroSection .hero_content { place-items: start end; }
+#HeroSection .hero_logo { position: absolute; bottom: 28px; left: 28px; }
+*/
+
+/* (Ixtiyoriy) Kichik ekranlar */
+@media (max-width: 600px) {
+    #HeroSection { min-height: 80svh; }
 }
