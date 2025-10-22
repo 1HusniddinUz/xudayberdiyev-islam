@@ -4,10 +4,8 @@ import HeroSection from "../sections/Herosection.jsx";
 const Header = () => {
     return (
         <header>
-            <div className="Header_overlay">
                 <Navbar />
                 <HeroSection />
-            </div>
         </header>
     )
 }

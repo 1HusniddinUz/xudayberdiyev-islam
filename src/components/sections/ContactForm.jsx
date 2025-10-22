@@ -1,6 +1,6 @@
 import React from "react";
 import "../../assets/ContactForm.css";
-import Logo from "../../assets/media/logo.png"
+import Logo from "../../assets/media/logo2.png"
 import {useTranslation} from "react-i18next";
 const ContactForm = () => {
     const {t} = useTranslation();
@@ -58,7 +58,7 @@ const ContactForm = () => {
                     <h3>{t(`location`)}</h3>
                     <iframe
                         title="map"
-                        src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d381.5469456400533!2d64.66392864174053!3d40.08933873105999!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDDCsDA1JzIyLjAiTiA2NMKwMzknNTAuNiJF!5e0!3m2!1sru!2s!4v1760935359429!5m2!1sru!2s"
+                        src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d921.8796611510138!2d64.66445010612341!3d40.08978736867633!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDDCsDA1JzIxLjgiTiA2NMKwMzknNTIuNyJF!5e0!3m2!1sru!2s!4v1761106117812!5m2!1sru!2s"
                         width="100%"
                         height="450"
                         style={{
@@ -68,7 +68,7 @@ const ContactForm = () => {
                         }}
                         allowFullScreen=""
                         loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"
+                        referrerPolicy="no-referrer-when-downgrade"
                     ></iframe>
                 </div>
             </div>

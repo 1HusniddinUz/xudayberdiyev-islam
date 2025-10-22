@@ -3,7 +3,7 @@
     position: relative;
     isolation: isolate;        /* z-index baland-pastini ajratadi */
     width: 100%;
-    min-height: 90dvh;         /* mobile-safe viewport */
+    min-height: 92dvh;         /* mobile-safe viewport */
     display: flex;
     align-items: center;
     justify-content: center;
