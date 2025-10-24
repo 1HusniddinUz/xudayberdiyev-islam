@@ -23,7 +23,7 @@ const products = [
     { id: 5, name: "DOIRA", img: img5, price: 220, type: "Clothes" },
     { id: 6, name: "CHANG", img: img6, price: 350, type: "Bags" },
     { id: 7, name: "SATO", img: img7, price: 125, type: "Bags" },
-    { id: 8, name: "TOR", img: img8, price: 250, type: "Bags" },
+    { id: 8, name: "TOR", img: img8, price: 600, type: "Bags" },
 ];
 
 const ProductCarousel = () => {
