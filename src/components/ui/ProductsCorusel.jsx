@@ -10,7 +10,7 @@ import img4 from "../../assets/media/4.jpg"
 import img5 from "../../assets/media/5.jpg"
 import img6 from "../../assets/media/6.jpg"
 import img7 from "../../assets/media/7.jpg"
-// import img8 from "../../assets/media/8.png"
+import img8 from "../../assets/media/8.jpg"
 // import {t} from "i18next";
 
 import "../../assets/ProductCorusel.css"
@@ -19,11 +19,11 @@ const products = [
     { id: 1, name: "DUTOR ALT", img: img1, price: 150, type: "Clothes" },
     { id: 2, name: "KASHKAR RUBOB", img: img2, price: 300, type: "Bags" },
     { id: 3, name: "AN'ANAVIY DUTOR", img: img3, price: 250, type: "Bags" },
-    { id: 4, name: "DUTOR", img: img4, price: 250, type: "Clothes" },
+    { id: 4, name: "UD", img: img4, price: 250, type: "Clothes" },
     { id: 5, name: "DOIRA", img: img5, price: 220, type: "Clothes" },
     { id: 6, name: "CHANG", img: img6, price: 350, type: "Bags" },
-    { id: 7, name: "DUTOR", img: img7, price: 125, type: "Bags" },
-    // { id: 8, name: "Ayollar ko'ylagi", img: img8, price: 37, type: "Clothes" },
+    { id: 7, name: "SATO", img: img7, price: 125, type: "Bags" },
+    { id: 8, name: "TOR", img: img8, price: 250, type: "Bags" },
 ];
 
 const ProductCarousel = () => {
